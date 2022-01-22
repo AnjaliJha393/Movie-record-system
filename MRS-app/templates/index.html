@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Home
+{% endblock title %}
+
+{% block body %}
+  <div class="container">
+    <h1>Movies List</h1>
+    <table class="table">
+      <thead>  <!-- table head-->
+        <tr>   <!--tr:- table row-->
+          <th>Movie Id</th>   <!--th:- table columns heading -->
+          <th>Poster Image</th>
+          <th>Movie Name</th>
+          <th>Director</th>
+          <th>Box Office</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>  <!--table body-->
+        
+        {% for movie in movielist %}
+          <tr>
+            <td>{{movie.mid}}</td>
+            <td><img src="static/uploadedimg/{{movie.mimg}}" width="50" alt="Invalid Path"/></td>
+            <td>{{movie.mname}}</td>
+            <td>{{movie.mdirector}}</td>
+            <td>{{movie.mboxoffice  }}</td>
+            <td>
+              <a href="/delete/{{movie.mid}}" class="btn btn-danger" onclick="return confirm('Do you want delete')">
+                
+                Delete</a>
+              <a href="/edit/{{movie.mid}}" class="btn btn-warning" onclick="return confirm('Do you want Edit')">
+                Edit</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>    
+  </div>
+{% endblock body %}

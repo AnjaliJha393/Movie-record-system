@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Movie 
+{% endblock title %}
+
+{% block body %}
+<div class="container">
+  <h1>Movie Record Form</h1>
+  {% if action == 'update' %}
+  <form action="/update" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="mid" class="form-label">Movie Id</label>
+      <input type="number" class="form-control" id="mid" name="mid" value="{{movieobj.mid}}" readonly>
+    </div>
+    {% endif %}
+    {% if action == 'add' %}
+    <form action="/add" method="POST" enctype="multipart/form-data">
+      {% endif %}
+      <div class="mb-3">
+        <label for="mname" class="form-label">Movie Name</label>
+        <input type="text" class="form-control" id="mname" name="mname" value="{{movieobj.mname}}">
+      </div>
+      <div class="mb-3">
+        <label for="mdirector" class="form-label">Movie Director</label>
+        <input type="text" class="form-control" id="mdirector" name="mdirector" value="{{movieobj.mdirector}}">
+      </div>
+      <div class="mb-3">
+        <label for="mboxoffice" class="form-label">Boxoffice Collection</label>
+        <input type="text" class="form-control" id="mboxoffice" name="mboxoffice" value="{{movieobj.mboxoffice}}">
+      </div>
+      <div class="mb-3">
+        <label for="mimg" class="form-label">Poster Image</label>
+        <input type="file" class="form-control" id="mimg" name="mimg" />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}
