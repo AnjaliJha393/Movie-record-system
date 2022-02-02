@@ -22,3 +22,8 @@ The Model fields include -
 * Matplotlib
 
 I used python libraries like Pandas and Matplotlib for visualization of the Movie Records Data
+
+
+### Screenshots
+
+
