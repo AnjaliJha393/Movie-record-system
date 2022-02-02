@@ -26,6 +26,18 @@ I used python libraries like Pandas and Matplotlib for visualization of the Movi
 
 ### Screenshots
 
+Application UI -
+
+![image](https://user-images.githubusercontent.com/97902053/152169412-5022280f-f003-4030-b8b0-ec4c98e11117.png)
+
+
+![image](https://user-images.githubusercontent.com/97902053/152169281-93bd290e-5e88-4391-b881-833d816b14ce.png)
+ 
+
+![image](https://user-images.githubusercontent.com/97902053/152169019-17316772-00eb-4b32-8d51-58f11583dab7.png)
+
+
+Visualization -
 
 ![image](https://user-images.githubusercontent.com/97902053/152167525-409bb4d9-8a05-4a40-8914-7cd0e091896b.png)
 
